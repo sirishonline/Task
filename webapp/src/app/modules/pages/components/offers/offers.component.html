@@ -1,0 +1,19 @@
+<div class="offersWidget">
+  <mat-card>
+    <table matSort (matSortChange)="sortData($event)">
+      <tr class="header">
+        <th mat-sort-header="offer_id">Offer ID</th>
+        <th mat-sort-header="name">Name</th>
+        <th>Image</th>
+        <th mat-sort-header="cash_back">Cash back</th>
+      </tr>
+
+      <tr *ngFor="let offer of sortedData">
+        <td>{{offer.offer_id}}</td>
+        <td>{{offer.name}}</td>
+        <td><img src="{{offer.image_url}}" /></td>
+        <td>{{offer.cash_back}}</td>
+      </tr>
+    </table>
+  </mat-card>
+</div>
